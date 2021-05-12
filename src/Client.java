@@ -13,7 +13,7 @@ public class Client {
         filePhonebook filePhonebook = new filePhonebook();
         phonebookList = filePhonebook.getData();
         Manager hai = new Manager(phonebookList);
-        Check checker = new Check();
+        Check checker = new Check(phonebookList);
 
 
         while (true){
@@ -80,7 +80,7 @@ public class Client {
                     do {
                         System.out.println("Nhập số điện thoại cho danh bạ cần xóa.");
                         phoneNumber4 = scanner11.nextLine();
-                    }while (checker.checkPhoneNumber(phoneNumber4));
+                    }while (!checker.checkPhoneNumber(phoneNumber4));
                     hai.deletePhoneBook(phoneNumber4);
                     break;
                 case 5:
@@ -89,7 +89,7 @@ public class Client {
                     do {
                         System.out.println("nhập số điện thoại để tìm kiếm danh bạ");
                         phoneNumber5 = scanner12.nextLine();
-                    }while (checker.checkPhoneNumber(phoneNumber5));
+                    }while (!checker.checkPhoneNumber(phoneNumber5));
                     hai.searchByPhoneNumber(phoneNumber5);
                     break;
                 case 6:
