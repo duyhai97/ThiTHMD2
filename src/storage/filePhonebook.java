@@ -12,7 +12,7 @@ public class filePhonebook implements DataPhonebook {
 
     @Override
     public List<Phonebook> getData() {
-        File file = new File("file1.csv");
+        File file = new File("list.csv");
         if (!file.exists()){
             try {
                 file.createNewFile();
@@ -49,7 +49,7 @@ public class filePhonebook implements DataPhonebook {
 
     @Override
     public void setData(List<Phonebook> phonebooks) {
-        File file = new File("file1.csv");
+        File file = new File("list.csv");
         if (!file.exists()) {
             try {
                 file.createNewFile();

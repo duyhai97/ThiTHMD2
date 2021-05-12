@@ -8,7 +8,6 @@ import java.util.List;
 
 public class Manager {
     List<Phonebook> phonebookList = new ArrayList<>();
-    filePhonebook   filePhonebook = new filePhonebook();
     public List<Phonebook> getPhonebookList() {
         return phonebookList;
     }
@@ -23,7 +22,6 @@ public class Manager {
 
     public void addNewPhoneBook(Phonebook phonebook){
         phonebookList.add(phonebook);
-        filePhonebook.setData(phonebookList);
     }
 
     public void showAllPhonebook(){
@@ -43,7 +41,6 @@ public class Manager {
                 phonebookList.get(i).setFacebook(facebook);
             }
         }
-        filePhonebook.setData(phonebookList);
     }
 
     public void deletePhoneBook(String phoneNumber){
@@ -52,7 +49,6 @@ public class Manager {
                 phonebookList.remove(phonebookList.get(i));
             }
         }
-        filePhonebook.setData(phonebookList);
     }
 
     public void searchByPhoneNumber(String phoneNumber){
