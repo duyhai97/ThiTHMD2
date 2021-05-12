@@ -1,3 +1,4 @@
+package view;
 import controller.Check;
 import controller.Manager;
 import model.Phonebook;
